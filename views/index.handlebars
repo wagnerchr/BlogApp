@@ -1,0 +1,28 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">Este é um blog simples feito em NodeJs + ExpressJs + MongoDb</p>
+  <hr class="my-4">
+  <p>Esse blog foi feito acompanhando o curso de NodeJS do Victor Lima no youtube</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Criar uma conta</a>
+</div>
+<hr>
+<h2>Postagens recentes:</h2>
+
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <small>{{categoria.nome}}</small>
+        <hr>
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p> <br>
+        <a href="/postagem/{{slug}}">
+        <button class="btn btn-success">Leia mais</button></a>
+        <hr>
+
+        <small>Data de publicação: {{data}}</small>
+
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma postagem</h5>
+{{/each}}
