@@ -1,2 +1,2 @@
 # BlogApp
-It's an NodeJs Blog
+It's a NodeJs Blog
